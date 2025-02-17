@@ -11,7 +11,7 @@ model = AutoModelForCausalLM.from_pretrained(
 
 # Check if CUDA (GPU) is available
 print("CUDA available1:", torch.cuda.is_available())
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cpu"
 print(f"Using device: {device}")
 
 # Send a test prompt

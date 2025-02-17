@@ -4,7 +4,7 @@ from vllm import LLM, SamplingParams
 app = FastAPI()
 
 # Load the model using VLLM (Replace with your preferred model)
-llm = LLM(model="mistralai/Mistral-7B-Instruct-v0.3", dtype="float16")
+llm = LLM(model="mistralai/Mistral-7B-Instruct-v0.3", dtype="float32", device="cpu")
 
 @app.post("/chat/")
 async def chat(prompt: str):
